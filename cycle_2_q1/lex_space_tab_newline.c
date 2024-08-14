@@ -15,8 +15,10 @@ typedef struct {
     char lexeme[64];
 } Token;
 
-const char *keywords[] = {"if", "else", "while", "return", "int", "float"};
-const int num_keywords = 6;
+const char *keywords[] = {"auto", "break", "case", "char", "const", "continue", "default", "do","double", "else", 
+"enum", "extern", "float", "for", "goto", "if", "inline", "int", "long", "register", "return", "short", "signed", "sizeof", "static", 
+"struct", "switch", "typedef", "union", "unsigned", "void", "volatile", "while"};
+const int num_keywords = 33;
 
 int is_keyword(const char *str) {
     for (int i = 0; i < num_keywords; i++) {
