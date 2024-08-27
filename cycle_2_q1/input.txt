@@ -1,8 +1,0 @@
-float result = 0.0;
-while (result < 100) {
-    result = result + 3.14;
-    if (result == 50) {
-        break;
-    }
-}
-
