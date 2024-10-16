@@ -1,0 +1,18 @@
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q5$ lex pgm.l
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q5$ gcc y.tab.c -ll -ly
+y.tab.c: In function ‘yyparse’:
+y.tab.c:1207:16: warning: implicit declaration of function ‘yylex’ [-Wimplicit-function-declaration]
+       yychar = yylex ();
+                ^~~~~
+y.tab.c:1342:7: warning: implicit declaration of function ‘yyerror’ [-Wimplicit-function-declaration]
+       yyerror (YY_("syntax error"));
+       ^~~~~~~
+pgm.y: At top level:
+pgm.y:62:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ main() {
+ ^~~~
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q5$ ./a.out
+Enter the expression:
+for(i=0;i<n;i++) i=i+1
+;
+Input accepted
