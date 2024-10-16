@@ -1,0 +1,11 @@
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q1$ lex name.l
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q1$ lex name.l
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q1$ ./name
+Enter your name (at least 4 characters): gops
+Ignoring strings that contain the substring: gops
+Valid String: 
+Akipog
+Valid String: Akipog
+gopssss
+Akiki
+Valid String: Akiki
