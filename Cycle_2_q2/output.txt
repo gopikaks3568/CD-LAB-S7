@@ -1,11 +1,20 @@
-mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q1$ lex name.l
-mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q1$ lex name.l
-mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q1$ ./name
-Enter your name (at least 4 characters): gops
-Ignoring strings that contain the substring: gops
-Valid String: 
-Akipog
-Valid String: Akipog
-gopssss
-Akiki
-Valid String: Akiki
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q2$ yacc -d variable.y
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q2$ lex variable.l
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q2$ gcc lex.yy.c y.tab.c -o variable -lfl
+y.tab.c: In function ‘yyparse’:
+y.tab.c:1116:16: warning: implicit declaration of function ‘yylex’ [-Wimplicit-function-declaration]
+       yychar = yylex ();
+                ^~~~~
+y.tab.c:1245:7: warning: implicit declaration of function ‘yyerror’ [-Wimplicit-function-declaration]
+       yyerror (YY_("syntax error"));
+       ^~~~~~~
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q2$ ./variable
+
+Enter a name to tested for identifier gops1
+
+It is a identifier!
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q2$ ./variable
+
+Enter a name to tested for identifier 1gops
+
+Its not a identifier!
