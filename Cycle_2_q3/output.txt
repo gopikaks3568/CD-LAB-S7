@@ -1,0 +1,11 @@
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q3$ yacc -d cal.y
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q3$ lex cal.l
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q3$ gcc lex.yy.c y.tab.c -w
+mec@cc-x-x:~/CD-S7-Gops/Cycle_2_q3$ ./a.out
+
+Enter an arithmetic expression which can have addition, subtraction, multiplication, division, modulus, and round brackets:
+(2+3)*3
+
+Result = 15
+
+Entered arithmetic expression is valid.
