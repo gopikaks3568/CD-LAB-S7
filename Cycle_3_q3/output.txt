@@ -1,0 +1,16 @@
+mec@cc-x-x:~/CD-S7-Gops/Cycle_3_q3$ gcc recursiveDescent.c
+recursiveDescent.c: In function ‘main’:
+recursiveDescent.c:19:3: warning: implicit declaration of function ‘gets’ [-Wimplicit-function-declaration]
+   gets(input);
+   ^~~~
+/tmp/ccY5qibQ.o: In function `main':
+recursiveDescent.c:(.text+0x36): warning: the `gets' function is dangerous and should not be used.
+mec@cc-x-x:~/CD-S7-Gops/Cycle_3_q3$ ./a.out
+Enter an arithmetic expression: a+(b-c)        
+
+Accepted..!!!
+mec@cc-x-x:~/CD-S7-Gops/Cycle_3_q3$ ./a.out
+Enter an arithmetic expression: a*
+
+Rejected..!!!
+
