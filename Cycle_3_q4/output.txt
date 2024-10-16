@@ -1,0 +1,30 @@
+mec@cc-x-x:~/CD-S7-Gops/Cycle_3_q4$ gcc shiftReduce.c
+shiftReduce.c: In function ‘main’:
+shiftReduce.c:11:5: warning: implicit declaration of function ‘gets’ [-Wimplicit-function-declaration]
+     gets(a);  // You can replace this with fgets() if needed
+     ^~~~
+/tmp/ccbANSWy.o: In function `main':
+shiftReduce.c:(.text+0x2e): warning: the `gets' function is dangerous and should not be used.
+mec@cc-x-x:~/CD-S7-Gops/Cycle_3_q4$ ./a.out
+mec@cc-x-x:~/CD-S7-Gops/Cycle_3_q4$ ./a.out
+GRAMMAR is E->E+E 
+ E->E*E 
+ E->(E) 
+ E->id
+Enter input string: (id+id*id)
+
+stack		input		action
+$(         	 id+id*id)$	SHIFT->symbols
+$(id       	   +id*id)$	SHIFT->id
+$(E        	   +id*id)$	REDUCE TO E
+$(E+       	    id*id)$	SHIFT->symbols
+$(E+id     	      *id)$	SHIFT->id
+$(E+E      	      *id)$	REDUCE TO E
+$(E        	      *id)$	REDUCE TO E
+$(E*       	       id)$	SHIFT->symbols
+$(E*id     	         )$	SHIFT->id
+$(E*E      	         )$	REDUCE TO E
+$(E        	         )$	REDUCE TO E
+$(E)       	          $	SHIFT->symbols
+$E         	          $	REDUCE TO E
+
