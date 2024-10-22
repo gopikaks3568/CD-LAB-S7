@@ -1,3 +1,4 @@
+//Write a lex program to recognize all strings which does not contain first four characters of your name as a substring.
 %{
 #include <stdio.h>
 #include <string.h>
